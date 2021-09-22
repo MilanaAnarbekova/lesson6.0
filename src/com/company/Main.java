@@ -10,16 +10,14 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Boss boss = new Boss();
-        boss.setDamage(60);
-        boss.setHealth(500);
-        boss.weapon.setWeaponName("suriken");
-        boss.weapon.setWeaponType("cold");
+        Boss boss = new Boss(400, 40, new Weapon("suriken","cold"));
+        System.out.println(boss.printInfo() );
+        Skeleton skeleton = new Skeleton(300,50,
+                new Weapon("bow","cold"),7);
+        System.out.println(skeleton.printInfo() + " ");
+        Skeleton skeleton2 = new Skeleton(306,40,
+                new Weapon("bow","cold"),9);
+        System.out.println(skeleton2.printInfo() + " ");
 
-        System.out.println("Boss damage = " + boss.getDamage() + " ;" +
-                " Boss health = " + boss.getHealth() +
-                " ;" + "Boss weapon name = " + boss.weapon.getWeaponName()
-                + ";" + " Boss weapon type = " + boss.weapon.getWeaponType());
-        System.out.println();
     }
 }

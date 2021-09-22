@@ -4,6 +4,11 @@ public class Weapon {
     private String weaponName;
     private String weaponType;
 
+    public Weapon(String weaponName, String weaponType) {
+        this.weaponType = weaponType;
+        this.weaponName = weaponName;
+    }
+
     public String getWeaponName() {
         return weaponName;
     }
@@ -19,4 +24,5 @@ public class Weapon {
     public void setWeaponType(String weaponType) {
         this.weaponType = weaponType;
     }
+
 }
