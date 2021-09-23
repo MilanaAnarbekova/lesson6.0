@@ -10,13 +10,25 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Boss boss = new Boss(400, 40, new Weapon("suriken","cold"));
-        System.out.println(boss.printInfo() );
-        Skeleton skeleton = new Skeleton(300,50,
-                new Weapon("bow","cold"),7);
+        Boss boss = new Boss();
+        boss.weapon.setWeaponType("Огнестрельный");
+        boss.weapon.setWeaponName("Пистолет");
+        boss.setDamage(45);
+        boss.setHealth(800);
+        System.out.println(boss.printInfo());
+        Skeleton skeleton = new Skeleton();
+        skeleton.setHealth(600);
+        skeleton.setDamage(20);
+        skeleton.weapon.setWeaponType("Дальнобойное");
+        skeleton.weapon.setWeaponName(" Лук");
+        skeleton.setNumberOfArrows(25);
         System.out.println(skeleton.printInfo() + " ");
-        Skeleton skeleton2 = new Skeleton(306,40,
-                new Weapon("bow","cold"),9);
+        Skeleton skeleton2 = new Skeleton();
+        skeleton2.setHealth(400);
+        skeleton2.setDamage(30);
+        skeleton2.weapon.setWeaponType("Дальнобойное(огненное)");
+        skeleton2.weapon.setWeaponName(" Огненный Лук");
+        skeleton2.setNumberOfArrows(30);
         System.out.println(skeleton2.printInfo() + " ");
 
     }

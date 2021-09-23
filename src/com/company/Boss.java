@@ -1,14 +1,7 @@
 package com.company;
 
 public class Boss extends GameEntity {
-    private Weapon weapon;
-
-
-    public Boss(int health, int damage, Weapon weapon) {
-        super(health, damage);
-        this.weapon = weapon;
-
-    }
+    Weapon weapon = new Weapon();
 
     public Weapon getWeapon() {
         return weapon;
@@ -20,7 +13,7 @@ public class Boss extends GameEntity {
 
     @Override
     public String printInfo() {
-        return super.printInfo() + " " + weapon;
+        return super.printInfo() + " " + weapon.getWeaponName() + " " + weapon.getWeaponType();
     }
 
 }

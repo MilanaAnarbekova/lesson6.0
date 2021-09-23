@@ -4,11 +4,6 @@ public class Weapon {
     private String weaponName;
     private String weaponType;
 
-    public Weapon(String weaponName, String weaponType) {
-        this.weaponType = weaponType;
-        this.weaponName = weaponName;
-    }
-
     public String getWeaponName() {
         return weaponName;
     }

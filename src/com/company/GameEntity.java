@@ -20,10 +20,7 @@ public class GameEntity {
         this.damage = damage;
     }
 
-    public GameEntity(int health, int damage) {
-        this.health = health;
-        this.damage = damage;
-    }
+
 
     public String printInfo() {
         return  health + " " + damage;
